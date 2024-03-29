@@ -1,0 +1,175 @@
+.formWrapper {
+  margin-top: 60px;
+  padding: 32px 38px;
+  border: 2px solid red;
+  width: 778px;
+  background-color: white;
+}
+.formHeaderText h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.6px;
+  text-align: left;
+  color: #2a2941;
+  margin-bottom: 16px;
+}
+.formHeaderText p {
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 20.8px;
+  text-align: left;
+  color: #b3b3b3;
+  margin-bottom: 32px;
+}
+
+.formImg {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.formImg input {
+  display: none;
+}
+.formImg label {
+  cursor: pointer;
+}
+
+.formImg img {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-position: center;
+}
+
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+.formInputs label {
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 17.71px;
+  text-align: left;
+}
+
+.formInputs label span {
+  color: red;
+  font-size: 18px;
+  font-weight: 800;
+}
+.formInputs input {
+  border-radius: 15px;
+  padding: 18px;
+  border: 1px solid #e3e3e3;
+  color: #6e6d77;
+}
+
+.formInputs span {
+  color: red;
+  font-size: 12px;
+}
+
+.formLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+}
+.formLinks p span {
+  color: red;
+  font-size: 18px;
+  font-weight: 800;
+}
+.linksWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.linksSmallCard {
+  padding: 16px 19px;
+  border: 1px solid #e3e3e3;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.formCity {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.formCity select {
+  min-width: 333px;
+  padding: 18px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  border-radius: 15px;
+  color: #6e6d77;
+}
+
+.formCity span {
+  color: red;
+  font-size: 12px;
+}
+
+.formInputs select {
+  padding: 18px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  border-radius: 15px;
+  color: #6e6d77;
+}
+.formInputs textarea {
+  resize: none;
+  /* height: 148px; */
+  display: block;
+  padding: 18px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #e3e3e3;
+  color: #6e6d77;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 42px;
+}
+
+.formButtons p {
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.24px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #6e6d77;
+  padding: 20px 59px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.formButtons p:hover {
+  background: #dedbdb;
+}
+
+.formButtons button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.24px;
+  letter-spacing: 1px;
+  text-align: left;
+  padding: 20px 43px;
+  background: #5361e4;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
