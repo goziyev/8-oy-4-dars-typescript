@@ -29,6 +29,7 @@ const MyComponent: React.FC = () => {
     employeeCount: "",
     description: "",
     country: "", // Country xususiyatini qo'shamiz
+    selectedImage:""
   });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
