@@ -114,7 +114,10 @@
   color: red;
   font-size: 12px;
 }
-
+.error {
+  color: red;
+  font-size: 12px;
+}
 .formInputs select {
   padding: 18px;
   border: 1px solid #e3e3e3;
