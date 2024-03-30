@@ -28,6 +28,7 @@ const MyComponent: React.FC = () => {
     livingPlace: "",
     employeeCount: "",
     description: "",
+    country: "", // Country xususiyatini qo'shamiz
   });
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +40,7 @@ const MyComponent: React.FC = () => {
           setFormData((prevData) => ({
             ...prevData,
             selectedImage: reader.result as string,
+            country: prevData.country, // Country xususiyatini saqlash
           }));
           // Rasm formatini tekshirish
           const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
@@ -87,7 +89,7 @@ const MyComponent: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (formData.selectedImage === FormDefault) {
+    if (formData.selectedImage === FormDefault || !formData.selectedImage) {
       setErrors({
         ...errors,
         selectedImage: "Rasm tanlanmagan. Iltimos, rasm yuklang.",
