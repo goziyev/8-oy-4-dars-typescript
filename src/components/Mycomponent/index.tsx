@@ -17,6 +17,7 @@ const MyComponent: React.FC = () => {
     livingPlace: "",
     employeeCount: "",
     description: "",
+    country: "", // Country qatorini qo'shamiz
   });
 
   const [errors, setErrors] = useState({
@@ -28,28 +29,36 @@ const MyComponent: React.FC = () => {
     employeeCount: "",
     description: "",
   });
+
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files && e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
         if (typeof reader.result === "string") {
-          setFormData({ ...formData, selectedImage: reader.result });
+          setFormData((prevData) => ({
+            ...prevData,
+            selectedImage: reader.result as string,
+          }));
           // Rasm formatini tekshirish
           const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
           if (!allowedExtensions.exec(file.name)) {
-            setErrors({ ...errors, selectedImage: "Faqat JPG, JPEG yoki PNG formatidagi rasmni yuklash mumkin." });
+            setErrors((prevErrors) => ({
+              ...prevErrors,
+              selectedImage:
+                "Faqat JPG, JPEG yoki PNG formatidagi rasmni yuklash mumkin.",
+            }));
           } else {
-            setErrors({ ...errors, selectedImage: "" });
+            setErrors((prevErrors) => ({
+              ...prevErrors,
+              selectedImage: "",
+            }));
           }
         }
       };
       reader.readAsDataURL(file);
     }
   };
-  
-
-
 
   const handleChange = (
     e: React.ChangeEvent<
